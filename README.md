@@ -1,6 +1,6 @@
-# SmartMotion
-SmartMotion is a motion classification system using FastAPI and Next.js.  
-It analyses accelerometer data (X, Y, Z) to classify segments as moving or stationary via a Linear Support Vector Machine (SVM).
+# SmartMotion Analytics Full Stack Web App
+SmartMotion is a motion classification system using FastAPI and Next.js.
+It analyses sensor data (accelerometer X, Y, Z and gyroscope Gx, Gy, Gz) to classify segments as moving or stationary via a Linear Support Vector Machine (SVM).
 
 ## Features
 - FastAPI backend with `/predict` endpoint
@@ -51,6 +51,27 @@ npm run dev
 ```
 Frontend runs at: http://localhost:3000
 
+## Workflow Diagram
+```bash
+User (uploads CSVs)
+       |
+       v
+   Next.js Frontend
+       |
+       v
+POST /predict (FastAPI)
+       |
+       v
+  Feature extraction
+       |
+       v
+     SVM predicts
+       |
+       v
+  JSON response → Frontend charts
+```
+
+
 ## Usage
 Upload two CSV files (Moving.csv & Stationary.csv) via the web UI.
 CSV format must include:
@@ -58,12 +79,13 @@ CSV format must include:
 ```bash
 X, Y, Z
 ```
-### Frontend Display:
-- plots mean X/Y/Z per segment
-- Black dashed line shows SVM prediction (0 = moving, 1 = stationary)
+
+### Frontend Charts
+- Coloured lines: mean X/Y/Z acceleration per segment
+- Black dashed line: SVM prediction (0 = moving, 1 = stationary)
+- Peaks/troughs indicate motion intensity
 
 ### API Endpoints
-
 GET /
 - Returns backend status:
 
