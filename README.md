@@ -28,7 +28,7 @@ SmartMotion/
 ## Quick Start
 ### 1. Clone
 ```bash
-git clone https://github.com/<your-username>/SmartMotion.git
+git clone https://github.com/NicolaJB/SmartMotion-Analytics-FullStack-WebApp.git
 cd SmartMotion
 ```
 ### 2. Backend (FastAPI)
