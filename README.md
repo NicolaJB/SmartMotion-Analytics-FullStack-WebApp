@@ -15,7 +15,7 @@ SmartMotion is a production-ready motion classification system using FastAPI and
 - Cloud deployment ready (Render, DockerHub)
 
 ## Project Structure
-
+```
 SmartMotion/
 ├── backend/
 │   ├── main.py              # FastAPI application
@@ -35,7 +35,7 @@ SmartMotion/
 ├── Dockerfile.frontend      # Frontend Docker image
 ├── .dockerignore
 └── README.md
-
+```
 ## Quick Start
 
 ### Prerequisites
