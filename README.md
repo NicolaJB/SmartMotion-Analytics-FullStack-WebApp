@@ -46,10 +46,13 @@ SmartMotion/
 ### Local Development
 
 #### 1. Clone Repository
-git clone git@github.com:NicolaJB/SmartMotion-Analytics-FullStack-WebApp.git
+```bash
+git clone https://github.com/NicolaJB/SmartMotion-Analytics-FullStack-WebApp.git
 cd SmartMotion-Analytics-FullStack-WebApp
+```
 
 #### 2. Backend Setup
+```bash
 cd backend
 python3 -m venv venv
 source venv/bin/activate        # macOS/Linux
@@ -57,15 +60,18 @@ source venv/bin/activate        # macOS/Linux
 
 pip install -r requirements.txt
 uvicorn main:app --reload
+```
 
 Backend runs at: http://127.0.0.1:8000
 - API Docs: http://127.0.0.1:8000/docs
 - Health Check: http://127.0.0.1:8000/health
 
 #### 3. Frontend Setup
+```bash
 cd frontend
 npm install
 npm run dev
+```
 
 Frontend runs at: http://localhost:3000
 
